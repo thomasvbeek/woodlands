@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Spinnaker&display=swap");
+
+* {
+  box-sizing: border-box;
+
+  font-family: "Spinnaker", sans-serif;
+}
+
+html,
+body,
+#root,
+.canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #000;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  text-align: left;
+  width: 300px;
+
+  font-family: "Spinnaker", sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.control strong {
+  font-size: 17px;
+  color: #fff;
+}
+
+.control svg {
+  margin: 0 0 15px 0;
+}
+
+.control ul {
+  margin: 15px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.control li {
+  margin: 0 0 0 0;
+  padding: 10px 0;
+
+  font-size: 11px;
+}
+
+.control.center li:hover {
+  background: #fff;
+  color: #000;
+}
+
+.fader {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+svg .fader:nth-child(even) {
+  animation-delay: 1.3s;
+  animation-duration: 2s;
+}
+
+.map {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  width: 800px;
+  height: 500px;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.mini-map {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-map-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.mini-map-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px 0;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.mini-map-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.mini-map-block:hover {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
